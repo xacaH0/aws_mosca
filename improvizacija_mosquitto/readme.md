@@ -1,0 +1,1 @@
+Ovo nam je prvi pokusaj koji nije efektivan ali funkcionise.
