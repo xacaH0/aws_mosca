@@ -1,10 +1,7 @@
 const { exec } = require("child_process");
- // skripta ce biti na t2.micro instanci. Treba jos da se razvije queue i ostala logika.
-
- // Plan je da vucemo user input pri klikom na dugme "Generate" i ova skripta dolazi u izrazaj.
-
- //skriptu ce pokretati instanca koja je uvijek live i slusa frontend za userov input.
-
+// this script will be on t2.micro instance. It needs more developing on the queue factor and remaining logic.
+// Plan is to get the user input when the "Generate" button is pressed this script will do the rest of the work.
+// Also t2.micro instance that runs this script will be live most of the time and will listen to the frontend for user input.
  
 exec("aws ec2 start-instances --instance-ids `ovde ide ID instance koja se treba pokrenuti`", (error, stdout, stderr) => {
     if (error) {

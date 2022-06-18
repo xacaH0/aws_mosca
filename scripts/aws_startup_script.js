@@ -1,11 +1,12 @@
-//jednostavna skripta koja ce se koristiti na c6a.8xlarge prilikom svakog boot-upa
-// `rimraf` je library koji se treba takodje instalirati
-/*skriptu treba implementirati na ec2 instanci na iduci nacin:
+//Simple script that will be on c6a.8xlarge instance that will be ran on every system bootup
+
+// `rimraf` is lib that has to be installed
+/*script will be implemented like this:
 1.  sudo nano /etc/rc.local  
-2.  ~~editovati `rc.local` tako da u njemu pise: node /path/to/aws_startup_script.js 
-3. sacuvati i izaci iz `rc.local`;
-4. runnati terminal komandu: `chmod +x /etc/rc.d/rc.local` da bi se ova skripta pokrenula prilikom bootupa 
-5. nakon sto je path do foldera korektan moze se restartirati sistem komandom `sudo init 6` radi testiranja.
+2.  ~~edit `rc.local` so it has this command: node /path/to/aws_startup_script.js 
+3. save and exit  `rc.local`;
+4. run terminal command: `chmod +x /etc/rc.d/rc.local` so the script will be ran on system bootup
+5. after making sure everything is good, we can test it out with command: `sudo init 6`, for testing purposes
 */
 
 var rimraf = require("rimraf");
