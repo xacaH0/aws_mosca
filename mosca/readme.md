@@ -1,0 +1,1 @@
+instalirati dependecies: npm i mosca mqtt jsonschema@1.2.6
